@@ -17,12 +17,15 @@ struct AgentCard: View {
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .overlay(alignment: .topLeading) {
+                    .overlay(alignment: .center) {
                         Text(agent.name)
                             .font(.headline)
                             .foregroundColor(.red)
-                            .shadow(color: .black, radius: 3, x: 0, y:0)
+                            .shadow(color: .gray, radius: 3, x: 0, y:0)
                             .padding()
+                            .background(Color(.black))
+                            .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                    
                     }
             } placeholder: {
                 Image(systemName: "photo")

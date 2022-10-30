@@ -27,20 +27,20 @@ struct AgentView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     
             }
-            .frame(height: 600)
+            .frame(height: 700)
             .background(LinearGradient(gradient: Gradient(colors: [Color(.black).opacity(0.35), Color(.black)]), startPoint: .top, endPoint: .bottom))
             
-            VStack(spacing: 30) {
+            VStack(spacing: 10) {
                 Text(agent.name)
                     .font(.largeTitle)
                     .bold()
                     .multilineTextAlignment(.center)
                 
-                VStack(alignment: .center, spacing: 30){
+                VStack(alignment: .leading, spacing: 30){
                     Text("Role: " + agent.category)
                         .font(.headline)
                         .bold()
-                    VStack(alignment: .leading, spacing: 20){
+                    VStack(alignment: .center, spacing: 20){
                         Text(agent.description)
                             .font(.headline)
                         
